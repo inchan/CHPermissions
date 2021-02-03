@@ -8,19 +8,18 @@
 import Foundation
 import CoreBluetooth
 
-class BluetoothPermission: NSObject, PermissionProtocol {
+class BluetoothPermission: NSObject, CHPermissionable {
     
     private var manager: CBCentralManager?
-    private var completion: Clouser.Completion?
+    private var completion: CHClouser.Void?
 
-    var status: Status {
+    var status: CHStatus {
         if #available(iOS 13.1, *) {
-            let authorization: CBManagerAuthorization = CBCentralManager().authorization
-            switch authorization {
+            switch CBCentralManager().authorization {
             case .notDetermined:
                 return .notDetermined
             case .restricted:
-                return .restrted
+                return .restricted
             case .allowedAlways:
                 return .authorized
             default:
@@ -31,7 +30,7 @@ class BluetoothPermission: NSObject, PermissionProtocol {
             case .notDetermined:
                 return .notDetermined
             case .restricted:
-                return .restrted
+                return .restricted
             case .authorized:
                 return .authorized
             default:
@@ -40,7 +39,7 @@ class BluetoothPermission: NSObject, PermissionProtocol {
         }
     }
         
-    func request(completion: @escaping Clouser.Completion) {
+    func request(completion: @escaping CHClouser.Void) {
         self.completion = completion
         self.manager = CBCentralManager(delegate: self, queue: nil, options: [:])
     }
@@ -50,6 +49,6 @@ class BluetoothPermission: NSObject, PermissionProtocol {
 extension BluetoothPermission: CBCentralManagerDelegate {
     
     func centralManagerDidUpdateState(_ central: CBCentralManager) {
-        self.completion?(self.status)
+        self.completion?()
     }
 }

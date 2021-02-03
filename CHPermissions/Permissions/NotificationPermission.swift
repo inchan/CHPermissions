@@ -9,32 +9,25 @@ import Foundation
 import UIKit
 import UserNotifications
 
-class NotificationPermission: NSObject, PermissionProtocol {
-    
-    var status: Status {
+struct NotificationPermission: CHPermissionable {
+        
+    var status: CHStatus {
         switch fetchNotificationStatus() {
         case .notDetermined: return .notDetermined
         case .authorized: return .authorized
-        case .provisional, .ephemeral: return .restrted
+        case .provisional, .ephemeral: return .restricted
         default: return .denied
         }
     }
     
-    func request(completion: @escaping Clouser.Completion) {
+    func request(completion: @escaping CHClouser.Void) {
         if #available(iOS 10.0, tvOS 10.0, *) {
-            let center = UNUserNotificationCenter.current()
-            center.requestAuthorization(options:[.badge, .alert, .sound]) { (granted, error) in
-                DispatchQueue.main.async(execute: { [weak self] in
-                    guard let strongSelf = self else { return }
-                    completion(strongSelf.status)
-                })
+            UNUserNotificationCenter.current().requestAuthorization(options:[.badge, .alert, .sound]) { (granted, error) in
+                completion()
             }
         } else {
             UIApplication.shared.registerUserNotificationSettings(UIUserNotificationSettings(types: [.badge, .sound, .alert], categories: nil))
-            DispatchQueue.main.async(execute: { [weak self] in
-                guard let strongSelf = self else { return }
-                completion(strongSelf.status)
-            })
+            completion()
         }
         UIApplication.shared.registerForRemoteNotifications()
     }

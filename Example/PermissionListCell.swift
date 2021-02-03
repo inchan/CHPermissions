@@ -7,14 +7,14 @@
 
 import Foundation
 import UIKit
+import CHPermissions
 
 class PermissionListCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var statusLabel: UILabel!
     
-    var permission: Permission? {
+    var permission: CHPermission? {
         didSet {
-            guard oldValue != permission else { return }
             guard let permission = permission else { return }
             titleLabel.text = permission.name
             switch permission.status {
