@@ -17,28 +17,27 @@ Swift를 사용하여 iOS 권한을 요청 및 상태확인을 할 수있습니�
 - [ ] Installation
     - [ ] CocoaPods ... `ing`
     - [x] Carthage
- - [ ] Usage ... `ing`
+- [ ] Supported Rx-Framework (RxSwift, RxCocoa)
+- [ ] Usage ... `ing`
 
 
 ## Usage
 
 권한 상태 확인  
 
-    let permission: CHPermission = .notification 
+    let permission: CHPermission = .notification
     let status = permission.status
     print("\(permission) status: \(status)")
-    
-    // or 
-    let isAuthorized = permission.isAuthorized
+
+    // or
+    let isAuthorized = status.isAuthorized
     print("\(permission) isAuthorized: \(isAuthorized)")
 
 권한 요청  
 
     let permission: CHPermission = .notification 
-    
-    permission.request { status in      
+    permission.request { status in          
         let isAuthorized = (status == .authorized)  
-        
         // or 
         switch status {
         case .notDetermined:
@@ -52,6 +51,4 @@ Swift를 사용하여 iOS 권한을 요청 및 상태확인을 할 수있습니�
         @unknown default:
             return .denied
         }
- 
-
     }

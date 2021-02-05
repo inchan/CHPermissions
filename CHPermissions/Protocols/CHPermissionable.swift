@@ -21,6 +21,4 @@ extension CHPermissionable {
     var status: CHStatus { return .error(.notSupportedPermission) }
         
     var isAuthorized: Bool { return self.status == .authorized }
-    
-    func request(completion: @escaping CHClouser.Void) { }
 }

@@ -12,7 +12,14 @@
 		6A08AEF3258729970035F93F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A08AEF1258729970035F93F /* Main.storyboard */; };
 		6A08AEF5258729990035F93F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A08AEF4258729990035F93F /* Assets.xcassets */; };
 		6A08AEF8258729990035F93F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A08AEF6258729990035F93F /* LaunchScreen.storyboard */; };
+		6A67552825CCE9A300BD1E75 /* MediaLibraryPermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A67552725CCE9A300BD1E75 /* MediaLibraryPermission.swift */; };
+		6A67552B25CCEA1900BD1E75 /* TrackingPermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A67552A25CCEA1900BD1E75 /* TrackingPermission.swift */; };
 		6A68178825B8161F00CD4557 /* PermissionListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A68178725B8161F00CD4557 /* PermissionListCell.swift */; };
+		6AADE5B325CBCC0F0016F06C /* RemindersPermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AADE5B225CBCC0F0016F06C /* RemindersPermission.swift */; };
+		6AADE5B625CBCC830016F06C /* CHPermissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AADE5B525CBCC830016F06C /* CHPermissions.swift */; };
+		6AADE5BA25CBEC700016F06C /* SpeechPermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AADE5B925CBEC700016F06C /* SpeechPermission.swift */; };
+		6AADE5BD25CBEC7E0016F06C /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AADE5BC25CBEC7E0016F06C /* LocationManager.swift */; };
+		6AADE5C025CBF26D0016F06C /* MotionPermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AADE5BF25CBF26D0016F06C /* MotionPermission.swift */; };
 		6AEA6D5D25B58E650007F8D2 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AEA6D5C25B58E650007F8D2 /* CoreBluetooth.framework */; };
 		6AF9ECAC25CA3EB1009539A3 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF9ECAB25CA3EB1009539A3 /* SettingViewController.swift */; };
 		6AF9ECC025CA7748009539A3 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF9ECBF25CA7748009539A3 /* UIViewControllerExtensions.swift */; };
@@ -73,7 +80,14 @@
 		6A08AF2B25872A3A0035F93F /* CHPermission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CHPermission.swift; sourceTree = "<group>"; };
 		6A08AF352587300A0035F93F /* CHStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CHStatus.swift; sourceTree = "<group>"; };
 		6A08AF38258730B60035F93F /* CHClouser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CHClouser.swift; sourceTree = "<group>"; };
+		6A67552725CCE9A300BD1E75 /* MediaLibraryPermission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaLibraryPermission.swift; sourceTree = "<group>"; };
+		6A67552A25CCEA1900BD1E75 /* TrackingPermission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingPermission.swift; sourceTree = "<group>"; };
 		6A68178725B8161F00CD4557 /* PermissionListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionListCell.swift; sourceTree = "<group>"; };
+		6AADE5B225CBCC0F0016F06C /* RemindersPermission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindersPermission.swift; sourceTree = "<group>"; };
+		6AADE5B525CBCC830016F06C /* CHPermissions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CHPermissions.swift; sourceTree = "<group>"; };
+		6AADE5B925CBEC700016F06C /* SpeechPermission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechPermission.swift; sourceTree = "<group>"; };
+		6AADE5BC25CBEC7E0016F06C /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		6AADE5BF25CBF26D0016F06C /* MotionPermission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionPermission.swift; sourceTree = "<group>"; };
 		6AEA6D5325B588DC0007F8D2 /* ContactsPermission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsPermission.swift; sourceTree = "<group>"; };
 		6AEA6D5725B58C300007F8D2 /* BluetoothPermission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothPermission.swift; sourceTree = "<group>"; };
 		6AEA6D5C25B58E650007F8D2 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
@@ -207,6 +221,12 @@
 				6AF9ECB725CA71EB009539A3 /* MicrophonePermission.swift */,
 				6AF9ECBB25CA7553009539A3 /* CalendarPermission.swift */,
 				6AF9ED1F25CAA36B009539A3 /* NotSupportedPermission.swift */,
+				6AADE5B225CBCC0F0016F06C /* RemindersPermission.swift */,
+				6AADE5B925CBEC700016F06C /* SpeechPermission.swift */,
+				6AADE5BC25CBEC7E0016F06C /* LocationManager.swift */,
+				6AADE5BF25CBF26D0016F06C /* MotionPermission.swift */,
+				6A67552725CCE9A300BD1E75 /* MediaLibraryPermission.swift */,
+				6A67552A25CCEA1900BD1E75 /* TrackingPermission.swift */,
 			);
 			path = Permissions;
 			sourceTree = "<group>";
@@ -230,6 +250,7 @@
 		6AF9ECC625CA8C1F009539A3 /* CHPermissions */ = {
 			isa = PBXGroup;
 			children = (
+				6AADE5B525CBCC830016F06C /* CHPermissions.swift */,
 				6A08AF2B25872A3A0035F93F /* CHPermission.swift */,
 				6A078F3D25B7CA960080B155 /* Protocols */,
 				6A08AF3025872F710035F93F /* Data */,
@@ -374,14 +395,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				6AF9ECE925CA8D1B009539A3 /* CHPermissionable.swift in Sources */,
+				6AADE5BD25CBEC7E0016F06C /* LocationManager.swift in Sources */,
 				6AF9ECEC25CA8D21009539A3 /* NotificationPermission.swift in Sources */,
+				6AADE5BA25CBEC700016F06C /* SpeechPermission.swift in Sources */,
 				6AF9ECEF25CA8D21009539A3 /* CalendarPermission.swift in Sources */,
+				6AADE5B625CBCC830016F06C /* CHPermissions.swift in Sources */,
+				6AADE5C025CBF26D0016F06C /* MotionPermission.swift in Sources */,
+				6A67552825CCE9A300BD1E75 /* MediaLibraryPermission.swift in Sources */,
 				6AF9ECF125CA8D21009539A3 /* PhotoLibraryPermission.swift in Sources */,
 				6AF9ECE025CA8D12009539A3 /* CHPermission.swift in Sources */,
 				6AF9ED2025CAA36B009539A3 /* NotSupportedPermission.swift in Sources */,
+				6AADE5B325CBCC0F0016F06C /* RemindersPermission.swift in Sources */,
 				6AF9ECF225CA8D21009539A3 /* MicrophonePermission.swift in Sources */,
 				6AF9ECED25CA8D21009539A3 /* BluetoothPermission.swift in Sources */,
 				6AF9ECEE25CA8D21009539A3 /* CameraPermission.swift in Sources */,
+				6A67552B25CCEA1900BD1E75 /* TrackingPermission.swift in Sources */,
 				6AF9ECE525CA8D17009539A3 /* CHError.swift in Sources */,
 				6AF9ECE425CA8D17009539A3 /* CHClouser.swift in Sources */,
 				6AF9ECF025CA8D21009539A3 /* ContactsPermission.swift in Sources */,

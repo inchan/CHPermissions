@@ -18,16 +18,9 @@ class PermissionListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
-        let permission: CHPermission = .notification
-        let status = permission.status
-        print("\(permission) status: \(status)")
-
-        // or
-        let isAuthorized = status.isAuthorized
-        print("\(permission) isAuthorized: \(isAuthorized)")
 
     }
+    
 }
 
 extension PermissionListViewController: UITableViewDataSource, UITableViewDelegate {

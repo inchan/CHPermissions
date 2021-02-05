@@ -8,5 +8,8 @@
 import Foundation
 
 struct NotSupportedPermission: CHPermissionable {
-    
+
+    func request(completion: @escaping CHClouser.Void) {
+        completion()
+    }
 }
