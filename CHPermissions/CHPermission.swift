@@ -80,7 +80,7 @@ extension CHPermission {
                 case .motion:     return MotionPermission()
                 case .mediaLibrary: return MediaLibraryPermission()
                 case .bluetooth: return BluetoothPermission()
-                case .tracking:   return TrackingPermission()
+                //case .tracking:   return TrackingPermission()
                 default: return NotSupportedPermission()
                 }
             }()

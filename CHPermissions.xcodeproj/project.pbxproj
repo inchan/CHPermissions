@@ -102,7 +102,6 @@
 				6AAB50C725D1040C009FC848 /* Permissions */,
 				6AAB50C025D1040C009FC848 /* Protocols */,
 				6A9BBC1D25D0E87500BBB7F8 /* Supporting Files */,
-				6A9BBC2025D0E87500BBB7F8 /* Assets */,
 			);
 			path = CHPermissions;
 			sourceTree = "<group>";
@@ -114,13 +113,6 @@
 				6A9BBC1F25D0E87500BBB7F8 /* CHPermissions.h */,
 			);
 			path = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		6A9BBC2025D0E87500BBB7F8 /* Assets */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Assets;
 			sourceTree = "<group>";
 		};
 		6AAB50C025D1040C009FC848 /* Protocols */ = {

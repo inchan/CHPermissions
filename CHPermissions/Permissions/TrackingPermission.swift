@@ -6,6 +6,8 @@
 //
 
 import Foundation
+
+/*
 import AppTrackingTransparency
 
 struct TrackingPermission: CHPermissionable {
@@ -40,3 +42,4 @@ struct TrackingPermission: CHPermissionable {
     }
     
 }
+*/
