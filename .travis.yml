@@ -1,0 +1,7 @@
+language: objective-c
+osx_image: xcode10.2
+xcode_sdk: iphonesimulator12.0
+script:
+- set -o pipefail
+- travis_retry xcodebuild -project CHPermissions.xcodeproj -scheme "CHPermissions" -configuration Release -sdk iphoneos | xcpretty
+- pod lib lint

@@ -11,16 +11,17 @@ import AVFoundation
 struct MicrophonePermission: CHPermissionable {
     
     var status: CHStatus {
-        switch AVAudioSession.sharedInstance().recordPermission {
-        case .undetermined:
-            return .notDetermined
-        case .granted:
-            return .authorized
-        case .denied:
-            return .denied
-        @unknown default:
-            return .denied
-        }
+//        switch AVAudioSession.sharedInstance().recordPermission {
+//        case .undetermined:
+//            return .notDetermined
+//        case .granted:
+//            return .authorized
+//        case .denied:
+//            return .denied
+//        @unknown default:
+//            return .denied
+//        }
+        return .denied
     }
     
     func request(completion: @escaping CHClouser.Void) {

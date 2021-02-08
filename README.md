@@ -1,54 +1,29 @@
-# CHPermission
+# CHPermissions
 
-[![Version](https://img.shields.io/cocoapods/v/CHPermission.svg?style=flat)](http://cocoadocs.org/docsets/CHPermission)
-[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
-[![License](https://img.shields.io/cocoapods/l/CHPermission.svg?style=flat)](http://cocoadocs.org/docsets/CHPermission)
+[![CI Status](https://img.shields.io/travis/enliple-kay/CHPermissions.svg?style=flat)](https://travis-ci.org/enliple-kay/CHPermissions)
+[![Version](https://img.shields.io/cocoapods/v/CHPermissions.svg?style=flat)](https://cocoapods.org/pods/CHPermissions)
+[![License](https://img.shields.io/cocoapods/l/CHPermissions.svg?style=flat)](https://cocoapods.org/pods/CHPermissions)
+[![Platform](https://img.shields.io/cocoapods/p/CHPermissions.svg?style=flat)](https://cocoapods.org/pods/CHPermissions)
 
-## About
+## Example
 
-Swift를 사용하여 iOS 권한을 요청 및 상태확인을 할 수있습니다.
+To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Requirements
-- iOS 10.0+
-- Xcode 11+
-- Swift 5.0+
 
-## Todo
-- [ ] Installation
-    - [ ] CocoaPods ... `ing`
-    - [x] Carthage
-- [ ] Supported Rx-Framework (RxSwift, RxCocoa)
-- [ ] Usage ... `ing`
+## Installation
 
+CHPermissions is available through [CocoaPods](https://cocoapods.org). To install
+it, simply add the following line to your Podfile:
 
-## Usage
+```ruby
+pod 'CHPermissions'
+```
 
-권한 상태 확인  
+## Author
 
-    let permission: CHPermission = .notification
-    let status = permission.status
-    print("\(permission) status: \(status)")
+enliple-kay, ickang@enliple.com
 
-    // or
-    let isAuthorized = status.isAuthorized
-    print("\(permission) isAuthorized: \(isAuthorized)")
+## License
 
-권한 요청  
-
-    let permission: CHPermission = .notification 
-    permission.request { status in          
-        let isAuthorized = (status == .authorized)  
-        // or 
-        switch status {
-        case .notDetermined:
-            ... 
-        case .restricted:
-            ...
-        case .denied:
-            ... 
-        case .authorized:
-            ... 
-        @unknown default:
-            return .denied
-        }
-    }
+CHPermissions is available under the MIT license. See the LICENSE file for more info.

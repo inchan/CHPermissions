@@ -1,11 +1,11 @@
 //
-//  ViewController.swift
-//  Permissioner
+//  PermissionListViewController.swift
+//  CHPermissions
 //
-//  Created by kay on 2020/12/14.
+//  Created by enliple-kay on 02/08/2021.
+//  Copyright (c) 2021 enliple-kay. All rights reserved.
 //
 
-import Foundation
 import UIKit
 import CHPermissions
 
@@ -13,12 +13,11 @@ class PermissionListViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    let permissions: [CHPermission] = CHPermission.allCases
+    let permissions: [CHPermission] = CHPermissions.list
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-
     }
     
 }
@@ -30,7 +29,7 @@ extension PermissionListViewController: UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "PermissionListCell", for: indexPath) as! PermissionListCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PermissionCell", for: indexPath) as! PermissionCell
         let permission = permissions[indexPath.row]
         cell.permission = permission
         return cell
@@ -53,5 +52,15 @@ extension PermissionListViewController: UITableViewDataSource, UITableViewDelega
             }
         }
     }
+
 }
 
+extension UIViewController {
+    
+    // 간편 알럿
+    func showAlert(title: String = "", message: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "ok", style: .cancel, handler: nil))
+        present(alertController, animated: true, completion: nil)
+    }
+}
