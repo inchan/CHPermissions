@@ -36,4 +36,5 @@ struct MotionPermission: CHPermissionable {
             manager.stopActivityUpdates()
         })
     }
+    
 }

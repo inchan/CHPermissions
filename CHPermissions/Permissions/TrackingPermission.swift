@@ -6,10 +6,11 @@
 //
 
 import Foundation
+
+/*
 import AppTrackingTransparency
 
 struct TrackingPermission: CHPermissionable {
-    
     
     var status: CHStatus {
         if #available(iOS 14.0, *) {
@@ -38,6 +39,7 @@ struct TrackingPermission: CHPermissionable {
         else {
             completion()
         }
-        
     }
+    
 }
+*/
