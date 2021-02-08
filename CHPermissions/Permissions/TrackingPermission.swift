@@ -10,7 +10,6 @@ import AppTrackingTransparency
 
 struct TrackingPermission: CHPermissionable {
     
-    
     var status: CHStatus {
         if #available(iOS 14.0, *) {
             switch ATTrackingManager.trackingAuthorizationStatus {
@@ -38,6 +37,6 @@ struct TrackingPermission: CHPermissionable {
         else {
             completion()
         }
-        
     }
+    
 }
