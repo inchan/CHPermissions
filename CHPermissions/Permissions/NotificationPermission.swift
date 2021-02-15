@@ -12,7 +12,10 @@ import UserNotifications
 struct NotificationPermission: CHPermissionable {
         
     var status: CHStatus {
-        switch fetchNotificationStatus() {
+        guard let notificationStatus = fetchNotificationStatus() else {
+            return .denied
+        }
+        switch notificationStatus {
         case .notDetermined: return .notDetermined
         case .authorized: return .authorized
         case .provisional, .ephemeral: return .restricted

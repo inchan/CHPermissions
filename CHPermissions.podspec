@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.author       = { 'inchan' => 'kangsazang@gmail.com' }
   
   s.source       = { :git => 'https://github.com/inchan/CHPermissions.git', :tag => s.version }
-  s.ios.deployment_target = '10.0'
+  s.ios.deployment_target = '12.1'
   s.ios.framework = 'UIKit'
   s.source_files  = 'CHPermissions/**/*.swift'
 
