@@ -1,5 +1,5 @@
 use_frameworks!
-platform :ios, '10.0'
+platform :ios, '12.1'
 
 target 'Example' do
   pod 'CHPermissions', :path => '../'

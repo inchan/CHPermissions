@@ -1,6 +1,5 @@
 language:
 - swift
-xcode_sdk: iphonesimulator11.1
 script:
 - xcodebuild -project CHPermissions.xcodeproj -scheme "CHPermissions" -configuration Release -sdk iphonesimulator -verbose
-- pod lib lint
+
