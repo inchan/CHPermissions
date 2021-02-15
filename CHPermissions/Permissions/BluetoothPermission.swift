@@ -15,7 +15,7 @@ class BluetoothPermission: NSObject, CHPermissionable {
 
     var status: CHStatus {
         if #available(iOS 13.1, *) {
-            switch CBCentralManager().authorization {
+            switch CBCentralManager.authorization {
             case .notDetermined:
                 return .notDetermined
             case .restricted:

@@ -11,16 +11,22 @@ import Photos
 struct PhotoLibraryPermission: CHPermissionable {
     
     var status: CHStatus {
-        switch PHPhotoLibrary.authorizationStatus() {
+        let status = PHPhotoLibrary.authorizationStatus()
+        switch status {
         case .notDetermined:
             return .notDetermined
         case .restricted:
             return .restricted
         case .denied:
             return .denied
-        case .authorized, .limited:
+        case .authorized:
             return .authorized
-        @unknown default:
+        default:
+            if #available(iOS 14.0, *) {
+                if status == PHAuthorizationStatus.limited {
+                    return .authorized
+                }
+            }
             return .denied
         }
     }
