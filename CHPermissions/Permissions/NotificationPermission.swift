@@ -19,14 +19,14 @@ struct NotificationPermission: CHPermissionable {
         case .notDetermined: return .notDetermined
         case .authorized: return .authorized
         default:
-            if #available(iOS 12.0, *) { // ERROR here
-                if notificationStatus == .provisional {
+            if #available(iOS 12.0, *) { 
+                if notificationStatus == UNAuthorizationStatus.provisional {
                     return .restricted
                 }
             }
             
-            if #available(iOS 14.0, *) { // ERROR here
-                if notificationStatus == .ephemeral {
+            if #available(iOS 14.0, *) {
+                if notificationStatus == UNAuthorizationStatus.ephemeral {
                     return .restricted
                 }
             }

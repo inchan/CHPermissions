@@ -1,5 +1,4 @@
-language:
-- swift
+language: swift
 script:
 - xcodebuild -project CHPermissions.xcodeproj -scheme "CHPermissions" -configuration Release -sdk iphonesimulator -verbose
 
