@@ -1,6 +1,6 @@
 # CHPermissions
 
-[![CI Status](https://img.shields.io/travis/enliple-kay/CHPermissions.svg?style=flat)](https://travis-ci.org/github/inchan/CHPermissions)
+[![CI Status](https://img.shields.io/travis/inchan/CHPermissions.svg?style=flat)](https://travis-ci.org/github/inchan/CHPermissions)
 [![Version](https://img.shields.io/cocoapods/v/CHPermissions.svg?style=flat)](https://cocoapods.org/pods/CHPermissions)
 [![License](https://img.shields.io/cocoapods/l/CHPermissions.svg?style=flat)](https://cocoapods.org/pods/CHPermissions)
 [![Platform](https://img.shields.io/cocoapods/p/CHPermissions.svg?style=flat)](https://cocoapods.org/pods/CHPermissions)
