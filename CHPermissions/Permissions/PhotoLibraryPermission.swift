@@ -20,7 +20,7 @@ struct PhotoLibraryPermission: CHPermissionable {
             return .denied
         case .authorized, .limited:
             return .authorized
-        @unknown default:
+        default:
             return .denied
         }
     }

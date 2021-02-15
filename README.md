@@ -62,7 +62,7 @@ pod 'CHPermissions'
             ... 
         case .authorized:
             ... 
-        @unknown default:
+        default:
             return .denied
         }
     }

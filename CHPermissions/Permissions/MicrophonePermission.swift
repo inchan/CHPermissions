@@ -18,7 +18,7 @@ struct MicrophonePermission: CHPermissionable {
 //            return .authorized
 //        case .denied:
 //            return .denied
-//        @unknown default:
+//        default:
 //            return .denied
 //        }
         return .denied

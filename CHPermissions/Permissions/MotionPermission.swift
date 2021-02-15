@@ -21,7 +21,7 @@ struct MotionPermission: CHPermissionable {
                 return .denied
             case .authorized:
                 return .authorized
-            @unknown default:
+            default:
                 return .denied
             }
         }
