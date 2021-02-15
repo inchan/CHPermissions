@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = 'CHPermissions'
-  s.version      = '0.0.3'
+  s.version      = '0.0.4'
   s.license      = 'MIT'
   s.summary      = 'Swift용 권한 상태 확인 및 요청.'
   s.homepage     = 'https://github.com/inchan/CHPermissions'
