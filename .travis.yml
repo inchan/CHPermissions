@@ -1,4 +1,4 @@
 language: swift
 script:
-- xcodebuild -project CHPermissions.xcodeproj -scheme "CHPermissions" -configuration Release -sdk iphonesimulator -verbose
+- xcodebuild -project CHPermissions.xcodeproj -scheme "CHPermissions" -configuration Release -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO | xcpretty
 
